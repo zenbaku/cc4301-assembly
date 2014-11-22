@@ -5,8 +5,8 @@
 # 003 - Manejo de Datos
 #
 # Ejemplo básico con uso de datos y direccionamiento.
-# En este ejemplo, se muestra cómo acceder a secciones de la memoria
-# donde se hayan alojado datos, y cómo leer estos datos para usarlos
+# En este ejemplo se muestra cómo acceder a secciones de la memoria
+# donde se hayan alojado datos y cómo leer estos datos para usarlos
 # en el programa.
 #
 #
@@ -32,16 +32,6 @@ mi_palabra:
 .text
   .global _start
 _start:
-  # Para referirse al valor, basta con usar el símbolo
-  movl mi_numero, %edx
-
-  # `mi_palabra` apunta al primer caracter de la palabra.
-  # en este caso, "H", que está codificado con el número 72
-  # que es el código que tiene en la tabla ASCII.
-  # se puede operar como si fuera un número.
-  # Luego, se verá cómo imprimir la palabra completa utilizando
-  # la salida estándar.
-
   # Para leer un dato, basta con referirse a él.
   # Por ejemplo, para cargar el número 234, alojado en "mi_numero":
   movl mi_numero, %ebx
