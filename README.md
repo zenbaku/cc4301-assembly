@@ -41,8 +41,8 @@ Cuando se compila un programa en C, el código atraviesa tres grandes etapas:
 El archivo resultante del proceso anterior es directamente ejecutable por el sistema.
 El proceso anterior se realiza, típicamente, con estos comandos:
 
-  `$ gcc programa.c -o programa // Compilar`
-  `$ ./programa // Ejecutar`
+    `$ gcc programa.c -o programa // Compilar`
+    `$ ./programa // Ejecutar`
 
 Sin embargo, si a `gcc` se le pasa el parámetro `-S` detendrá la compilación en la etapa 1. Generando un archivo `.s`, el cual tendrá el código en Assembler. Este archivo no es directamente ejecutable, pues aún necesita atravesar las etapas de ensamblado y linkeo (*GCC* puede continuar la compilación a partir del archivo `.s` por lo que no hay de qué preocuparse).
 
@@ -82,6 +82,13 @@ Si el archivo `.s` ya existe, se puede realizar el ensamblado y linkeo en un sol
 
 1. `$ gcc -nostdlib programa.s -o programa`
 
+#### Ensamblar los ejemplos
+
+Para ensamblar todos los ejemplos, se puede utilizar un archivo `Makefile`, provisto en cada carpeta:
+
+  1. `cd ejemplos_x86`
+  2. `make`
+  3. `./001_inicio`
 
 #### TIPS
 
@@ -91,7 +98,10 @@ Si el archivo `.s` ya existe, se puede realizar el ensamblado y linkeo en un sol
 
 ###### LINKS ÚTILES
 
-http://docs.cs.up.ac.za/programming/asm/derick_tut/syscalls.html
-http://syscalls.kernelgrok.com/
-http://en.wikipedia.org/wiki/Function_prologue
-http://www.cs.virginia.edu/~evans/cs216/guides/x86.html
+  - http://docs.cs.up.ac.za/programming/asm/derick_tut/syscalls.html
+  - http://blog.rchapman.org/post/36801038863/linux-system-call-table-for-x86-64
+  - http://syscalls.kernelgrok.com/
+  - http://en.wikipedia.org/wiki/Function_prologue
+  - http://www.cs.virginia.edu/~evans/cs216/guides/x86.html
+  - http://www.asciitable.com/
+  - http://web.mit.edu/gnu/doc/html/as_7.html

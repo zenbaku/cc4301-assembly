@@ -2,7 +2,7 @@
 # Facultad de Ciencias Físicas y Matemáticas
 # Universidad de Chile
 #
-# 001 - Operaciones Aritméticas
+# 001 - Suma
 #
 # Ejemplo báisco con sumas
 # En este ejemplo se realiza la primera operación aritmética.
