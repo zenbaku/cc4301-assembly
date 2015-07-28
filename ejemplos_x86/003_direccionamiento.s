@@ -64,16 +64,16 @@ _start:
 
   # También se puede utilizar otro registro como índice
   # Supongamos que se desea acceder al 5to elemento.
-  # El índice sería el 4, puse se cuenta desde el cero.
+  # El índice sería el 4, pues se cuenta desde el cero.
   # Se guarda en un registro
   movl $4, %edx
-  # Y se realiza desplazamiento, pero esta base usando esta notación
-  movl (%ecx, %edx), %ebx # 44  = ,
+  # Y se realiza desplazamiento, pero esta vez usando esta notación
+  movl (%ecx, %edx), %ebx # 44
 
   # La notación completa es
   #   displacement(base, index, scale)
   # Donde:
-  # - displacemente: es un inmediato, que se suma al resultado
+  # - displacement: es un inmediato, que se suma al resultado
   # - base: un registro, que tiene la dirección de memoria base
   # - index: un registro utilizado para "salta", o "indexar" la dirección
   # - scale: un registro para escalar el salto.
